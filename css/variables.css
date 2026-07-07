@@ -1,0 +1,39 @@
+/* ==========================
+   DESIGN SYSTEM
+========================== */
+
+:root{
+
+    /* Colors */
+    --primary:#00E5FF;
+    --secondary:#0077FF;
+    --accent:#00FFC8;
+
+    --bg:#050816;
+    --surface:#111827;
+    --card:rgba(255,255,255,.06);
+
+    --text:#ffffff;
+    --text-light:#b8c0cc;
+
+    /* Fonts */
+    --font:"Poppins",sans-serif;
+
+    /* Radius */
+
+    --radius:20px;
+
+    /* Shadows */
+
+    --shadow:
+    0 10px 40px rgba(0,229,255,.18);
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+    /* Container */
+
+    --container:1280px;
+
+}
