@@ -1,29 +1,38 @@
-const form=document.getElementById("contact-form");
+const form = document.getElementById("contact-form");
+const btn = document.getElementById("sendBtn");
 
-form.addEventListener("submit",function(e){
+emailjs.init("CxiI7JmCyun9Y-eTq");
 
-e.preventDefault();
+form.addEventListener("submit", async function (e) {
 
-emailjs.sendForm(
+    e.preventDefault();
 
-"service_73mibg7",
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
 
-"template_hmjtm3m",
+    try {
 
-this
+        const result = await emailjs.sendForm(
+            "service_73mibg7",
+            "template_hmjtm3m",
+            form
+        );
 
-).then(()=>{
+        console.log(result);
 
-alert("✅ Message Sent Successfully!");
+        alert("✅ Message Sent Successfully!");
 
-form.reset();
+        form.reset();
 
-}).catch((error)=>{
+    } catch (error) {
 
-alert("❌ Failed to Send!");
+        console.error(error);
 
-console.log(error);
+        alert("❌ Failed to send message!");
 
-});
+    }
+
+    btn.disabled = false;
+    btn.innerHTML = "Send Message";
 
 });
