@@ -42,6 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </head>
 
+
 <body>
 
 <!-- Loader -->
@@ -925,26 +926,31 @@ software development, networking, or collaboration.
 
 <div class="contact-form">
 
-<form>
+<form id="contact-form">
 
 <input
 type="text"
+name="from_name"
 placeholder="Your Name"
 required>
 
 <input
 type="email"
+name="reply_to"
 placeholder="Your Email"
 required>
 
 <input
 type="text"
+name="subject"
 placeholder="Subject"
 required>
 
 <textarea
+name="message"
 rows="6"
-placeholder="Your Message"></textarea>
+placeholder="Your Message"
+required></textarea>
 
 <button
 type="submit"
@@ -955,7 +961,6 @@ Send Message
 </button>
 
 </form>
-
 </div>
 
 </div>
@@ -1052,6 +1057,14 @@ IT & Networking Professional - Network Engineer - Technical Support Engineer
 <script src="js/typing.js"></script>
 
 <script src="js/particles.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("CxiI7JmCyun9Y-eTq");
+</script>
+
+<script src="js/contact.js"></script>
 
 </body>
 
