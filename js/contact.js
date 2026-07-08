@@ -26,18 +26,14 @@ form.addEventListener("submit", async function (e) {
 
     } catch (error) {
 
-    console.log(error);
+    console.error(error);
 
-    console.log("STATUS:", error.status);
-
-    console.log("TEXT:", error.text);
-
-    console.log("FULL:", JSON.stringify(error));
-
-    alert(error.text);
+    alert(`
+Status : ${error.status}
+Message : ${error.text}
+`);
 
 }
-
     btn.disabled = false;
     btn.innerHTML = "Send Message";
 
