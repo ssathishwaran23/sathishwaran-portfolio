@@ -26,9 +26,13 @@ form.addEventListener("submit", async function (e) {
 
     } catch (error) {
 
-    console.log("Status:", error.status);
-    console.log("Text:", error.text);
     console.log(error);
+
+    console.log("STATUS:", error.status);
+
+    console.log("TEXT:", error.text);
+
+    console.log("FULL:", JSON.stringify(error));
 
     alert(error.text);
 
